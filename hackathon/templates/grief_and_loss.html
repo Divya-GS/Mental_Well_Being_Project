@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>FORM</title>
+  <head>
+    <title>HomePage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin-top:90px}
+
+        /* Slideshow container */
+        .slideshow-container {
+        position: relative;
+        width:50%;
+        background:transparent;
+        }
+
+        /* Slides */
+        .mySlides {
+        display: none;
+        padding: 80px;
+        text-align: center;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -30px;
+        padding: 16px;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 30px 30px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        position: absolute;
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        
+        color:black;
+        }
+
+        /* The dot/bullet/indicator container */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: transparent;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color:black;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        /* Add a background color to the active dot/circle */
+        .active, .dot:hover {
+        background-color: white;
+        }
+
+        /* Add an italic font style to all quotes */
+        q {font-style: italic;}
+
+        /* Add a blue color to the author */
+        .author {color: cornflowerblue;}
+
+        *{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size:20px;
+            color:black;
+        }
+
+        .qns{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:25px;
+            color:black;
+            margin-top:0px;
+
+        }
+
+        .img{
+        float:right;
+        height:400px;
+        }
+    </style>
+  </head>
+  <body style="background-color:rgb(218, 214, 214)">
+    <img src="https://i0.wp.com/blog.well-nest.ca/wp-content/uploads/2020/07/blog-post_-toxic-positivity.png?resize=1080%2C608&ssl=1" class="img">
+    <div class="slideshow-container">
+      <form action="{{ url_for('Grief_and_loss') }}" method="POST">
+        <div class="mySlides">
+          <div class="custom-control custom-radio" style="text-align:left">
+            <p class="qns">Do you ever felt that it is so difficult to move on in your life?</p>
+            <div class="custom-control custom-radio" >
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="Never">
+                <label class="custom-control-label" for="customRadio">   Never   </label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio1" name="example1" value="Sometimes">
+                <label class="custom-control-label" for="customRadio1">Sometimes</label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio2" name="example1" value="Fairly Often">
+                <label class="custom-control-label" for="customRadio2">Fairly Often</label>
+              </span>
+            </div>  
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio3" name="example1" value="Very Often">
+                <label class="custom-control-label" for="customRadio3">Very Often</label>
+              </span>
+            </div>  
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="custom-control custom-radio" style="text-align:left">
+            <p class="qns"> Do you avoid remainders that the person who died is truly gone?</p>
+            <div class="custom-control custom-radio" >
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio4" name="example2" value="Never">
+                <label class="custom-control-label" for="customRadio4">   Never   </label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio5" name="example2" value="Sometimes">
+                <label class="custom-control-label" for="customRadio5">Sometimes</label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio6" name="example2" value='Fairly Often'>
+                <label class="custom-control-label" for="customRadio6">Fairly Often</label>
+              </span>
+            </div>  
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio7" name="example2" value="Very Often">
+                <label class="custom-control-label" for="customRadio7">Very Often</label>
+              </span>
+            </div>  
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="custom-control custom-radio" style="text-align:left">
+            <p class="qns"> Do you have trouble in believing that person who died is truly gone?</p>
+            <div class="custom-control custom-radio" >
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio8" name="example3" value="Never">
+                <label class="custom-control-label" for="customRadio8">   Never   </label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio9" name="example3" value="Sometimes">
+                <label class="custom-control-label" for="customRadio9">Sometimes</label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio10" name="example3" value="Fairly often">
+                <label class="custom-control-label" for="customRadio10">Fairly Often</label>
+              </span>
+            </div>  
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio11" name="example3" value="Very Often">
+                <label class="custom-control-label" for="customRadio11">Very Often</label>
+              </span>
+            </div>  
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="custom-control custom-radio" style="text-align:left">
+            <p class="qns"> Do you ever felt like part of yourself has died? </p>
+            <div class="custom-control custom-radio" >
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio12" name="example4" value="Never">
+                <label class="custom-control-label" for="customRadio12">   Never   </label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio13" name="example4" value="Sometimes">
+                <label class="custom-control-label" for="customRadio13">Sometimes</label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio14" name="example4" value="Fairly Often">
+                <label class="custom-control-label" for="customRadio14">Fairly Often</label>
+              </span>
+            </div>  
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio15" name="example4" value="Very Often">
+                <label class="custom-control-label" for="customRadio15">Very Often</label>
+              </span>
+            </div>  
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="custom-control custom-radio" style="text-align:left">
+            <p class="qns">Do you miss the person who died?</p>
+            <div class="custom-control custom-radio" >
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio16" name="example5" value="Never">
+                <label class="custom-control-label" for="customRadio16">   Never   </label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio17" name="example5" value="Sometimes">
+                <label class="custom-control-label" for="customRadio17">Sometimes</label>
+              </span>
+            </div>    
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio18" name="example5" value="Fairly Often">
+                <label class="custom-control-label" for="customRadio18">Fairly Often</label>
+              </span>
+            </div>  
+            <div class="custom-control custom-radio">
+              <span>
+                <input type="radio" class="custom-control-input" id="customRadio19" name="example5" value="Very Often">
+                <label class="custom-control-label" for="customRadio19">Very Often</label>
+              </span>
+              <button type="submit" class="btn btn-dark " style="margin-top: 2%; float: right;">Submit</button>
+
+            </div>  
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </form>
+    </div>
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+    
+      function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      }
+    </script>
+    
+  </body>
+</html> 
